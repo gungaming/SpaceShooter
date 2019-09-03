@@ -42,12 +42,11 @@ class MainMenu extends Phaser.Scene {
         this.btnPlay.on("pointerdown", function () {
             this.btnPlay.setTexture("sprBtnPlayDown");
             this.sfx.btnDown.play();
-            this.scene.start('GameScene');
         }, this);
 
         this.btnPlay.on("pointerup", function () {
             this.btnPlay.setTexture("sprBtnPlay");
-            this.scene.start("SceneMain");
+            this.scene.start('GameScene');
         }, this);
 
         this.title = this.add.text(this.game.config.width * 0.5, 128, "SPACE SHOOTER", {
